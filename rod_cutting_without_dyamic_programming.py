@@ -17,6 +17,6 @@ def Cut_Rod(P,n):       # n = length of rod, P = array of prices for each inch
         q = max(q,P[i] + Cut_Rod(P,n-i))    # If a rod of length i has been cut, then we just need to cut the remaining rod of length n-i. That is why P[i] is directly taken to be price because it has not be cut further. But revenue for left out rod of length n-1 is calculated recursively
     return q
 
-arr = [1,5,8,9,10,17,17,20,24,30]
+arr = [None,1,5,8,9,10,17,17,20,24,30]
 
-print('Answer :',Cut_Rod(arr,3))
+print('Answer :',Cut_Rod(arr,4))
